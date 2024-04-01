@@ -31,11 +31,12 @@ public class basketScript : MonoBehaviour
 
 
     }
-    // Makes objects with the tag "tree" disappear on contact:
+    // Makes objects with the tag "mushroom" disappear on contact:
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "mushroom")
         {
+            Debug.Log("touch");
             Destroy(other.gameObject);
         }
     }
