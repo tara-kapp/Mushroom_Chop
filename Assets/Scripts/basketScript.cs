@@ -20,5 +20,23 @@ public class basketScript : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
+
+        if (Input.GetMouseButton(0))
+        {
+            var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos.z = 0f; // zero z
+            mouseWorldPos.y = -5f; // negative five y
+            transform.position = mouseWorldPos;
+        }
+
+
+    }
+    // Makes objects with the tag "tree" disappear on contact:
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "mushroom")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
