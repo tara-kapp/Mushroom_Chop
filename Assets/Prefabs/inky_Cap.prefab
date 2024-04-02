@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2157250686380969935}
   - component: {fileID: 2157250686380969930}
   - component: {fileID: 2157250686380969929}
+  - component: {fileID: 7438593742491165709}
   m_Layer: 0
   m_Name: inky_Cap
-  m_TagString: Untagged
+  m_TagString: mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +116,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -204,3 +205,18 @@ PolygonCollider2D:
       - {x: 0.295, y: -2.45}
       - {x: 0.345, y: -2.3999999}
       - {x: 0.385, y: -2.33}
+--- !u!114 &7438593742491165709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157250686380969934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282da281376c3ea49bcd3dee87608ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basket: {fileID: 0}
+  distanceToDestroy: 5
+  distCheck: 0
