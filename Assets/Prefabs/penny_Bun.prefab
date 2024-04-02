@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3075325386928676342}
   - component: {fileID: 2242754906848979912}
   - component: {fileID: 6525688107216644487}
+  - component: {fileID: 2137315864591479324}
+  - component: {fileID: 6432994767861238590}
   m_Layer: 0
   m_Name: penny_Bun
-  m_TagString: Untagged
+  m_TagString: mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +117,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -219,3 +221,32 @@ PolygonCollider2D:
       - {x: -0.445, y: -2.45}
       - {x: -0.275, y: -2.37}
       - {x: -0.155, y: -2.27}
+--- !u!114 &2137315864591479324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075325386928676343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3d53cd1475b0642bbd9e0b6f30f10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_edible: 0
+  score: 0
+--- !u!114 &6432994767861238590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075325386928676343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282da281376c3ea49bcd3dee87608ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basket: {fileID: 0}
+  distanceToDestroy: 5
+  distCheck: 0

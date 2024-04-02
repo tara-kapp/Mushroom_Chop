@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using System;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class basketScript : MonoBehaviour
 {
@@ -38,6 +40,7 @@ public class basketScript : MonoBehaviour
         {
             Debug.Log("touch");
             Destroy(other.gameObject);
+       
         }
     }
 }
