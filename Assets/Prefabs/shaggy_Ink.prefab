@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2435888227758627148}
   m_Layer: 0
   m_Name: shaggy_Ink
-  m_TagString: mushroom
+  m_TagString: edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

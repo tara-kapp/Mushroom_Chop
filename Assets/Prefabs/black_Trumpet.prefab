@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 1767496103443134727}
   - component: {fileID: 1767496103443134726}
   - component: {fileID: 1767496103443134721}
-  - component: {fileID: -4142100178102645126}
   - component: {fileID: 1289886297689930115}
   m_Layer: 0
   m_Name: black_Trumpet
-  m_TagString: mushroom
+  m_TagString: edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,20 +322,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4142100178102645126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767496103443134720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3d53cd1475b0642bbd9e0b6f30f10b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  is_edible: 0
-  score: 0
 --- !u!114 &1289886297689930115
 MonoBehaviour:
   m_ObjectHideFlags: 0

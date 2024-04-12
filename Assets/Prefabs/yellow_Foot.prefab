@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 2362592290921047500}
   - component: {fileID: 2362592290921047499}
   - component: {fileID: 2362592290921047498}
-  - component: {fileID: 3679366562666670000}
   - component: {fileID: -2541940510617633931}
   m_Layer: 0
   m_Name: yellow_Foot
-  m_TagString: mushroom
+  m_TagString: edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,20 +401,6 @@ PolygonCollider2D:
       - {x: -0.36499998, y: -0.58}
       - {x: -0.375, y: -0.59}
       - {x: -0.405, y: -0.59999996}
---- !u!114 &3679366562666670000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2362592290921047503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3d53cd1475b0642bbd9e0b6f30f10b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  is_edible: 0
-  score: 0
 --- !u!114 &-2541940510617633931
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,7 +29,6 @@ public class spawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Console.WriteLine(mush);
         mush = UnityEngine.Random.Range(0, rangeEnd);
         delay += 1;
         if (delay % 50 == 0)

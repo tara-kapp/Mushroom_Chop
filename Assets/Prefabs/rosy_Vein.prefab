@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4047490293923883305}
   m_Layer: 0
   m_Name: rosy_Vein
-  m_TagString: mushroom
+  m_TagString: inedible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

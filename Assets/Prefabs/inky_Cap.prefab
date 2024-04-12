@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7438593742491165709}
   m_Layer: 0
   m_Name: inky_Cap
-  m_TagString: mushroom
+  m_TagString: inedible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

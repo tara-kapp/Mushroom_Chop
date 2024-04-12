@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 4645656267143078748}
   - component: {fileID: 4645656267143078745}
   - component: {fileID: 4645656267143078750}
-  - component: {fileID: 904384184100827436}
   - component: {fileID: 3405978126771417132}
   m_Layer: 0
   m_Name: morel_
-  m_TagString: mushroom
+  m_TagString: edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,20 +197,6 @@ PolygonCollider2D:
       - {x: 0.84499997, y: -2.46}
       - {x: 0.885, y: -2.3799999}
       - {x: 0.895, y: -2.22}
---- !u!114 &904384184100827436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4645656267143078749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3d53cd1475b0642bbd9e0b6f30f10b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  is_edible: 0
-  score: 0
 --- !u!114 &3405978126771417132
 MonoBehaviour:
   m_ObjectHideFlags: 0
