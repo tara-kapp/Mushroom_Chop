@@ -9,6 +9,7 @@ TagManager:
   - edible
   - inedible
   - hallucigenic
+  - GameHandler
   layers:
   - Default
   - TransparentFX

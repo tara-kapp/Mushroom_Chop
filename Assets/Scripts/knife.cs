@@ -44,7 +44,7 @@ public class knife : systemScoring
             Destroy(other.gameObject);
             GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
             StartCoroutine(DestroyVFX(boomFX));
-            RemoveScore();
+            RemoveHealth();
         }
         else if (other.gameObject.tag == "hallucigenic")
         {
