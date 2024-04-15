@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4015852630893220634}
   - component: {fileID: 4015852630893220613}
   - component: {fileID: -4782151968277815514}
+  - component: {fileID: 5926069097039728066}
   m_Layer: 0
   m_Name: death_Cap
   m_TagString: inedible
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 1ce06cab286de2748880b5dbb5e0accb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -266,3 +267,16 @@ MonoBehaviour:
   basket: {fileID: 0}
   distanceToDestroy: 5
   distCheck: 0
+--- !u!114 &5926069097039728066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015852630893220614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad271d730e7fe9c4cbf95a909c1a8d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}

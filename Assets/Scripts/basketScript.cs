@@ -20,7 +20,6 @@ public class basketScript : systemScoring
     // Listen for player input to move the object:
     void FixedUpdate()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
 
         if (Input.GetMouseButton(0))

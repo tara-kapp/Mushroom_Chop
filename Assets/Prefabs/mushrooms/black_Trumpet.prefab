@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1767496103443134726}
   - component: {fileID: 1767496103443134721}
   - component: {fileID: 1289886297689930115}
+  - component: {fileID: 4509674122166252226}
   m_Layer: 0
   m_Name: black_Trumpet
   m_TagString: edible
@@ -337,3 +338,16 @@ MonoBehaviour:
   basket: {fileID: 0}
   distanceToDestroy: 5
   distCheck: 0
+--- !u!114 &4509674122166252226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767496103443134720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad271d730e7fe9c4cbf95a909c1a8d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
