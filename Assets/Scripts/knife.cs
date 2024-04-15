@@ -14,14 +14,13 @@ public class knife : systemScoring
     public GameObject hitVFX;
     public Camera visionBlur;
 
-    void FixedUpdate()
+    void Update()
     {
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(cursorPos.x, cursorPos.y);
         
         if (Input.GetMouseButtonDown(0)) {
             spriteRenderer.sprite = arrowSprite;
-            //Destroy(polygonCollider);
             polygonCollider.isTrigger = true;
         }
         if (Input.GetMouseButtonUp(0)) {
@@ -51,8 +50,8 @@ public class knife : systemScoring
             Destroy(other.gameObject);
             GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
             StartCoroutine(DestroyVFX(boomFX));
-            Instantiate(visionBlur);
-            StartCoroutine(ReturnVision());
+            Camera cameraFX = Instantiate(visionBlur);
+            StartCoroutine(ReturnVision(cameraFX));
         }
 
 
@@ -63,10 +62,11 @@ public class knife : systemScoring
             //gameObject.GetComponent<AudioSource>().Stop();
         }
 
-        IEnumerator ReturnVision()
+        IEnumerator ReturnVision(Camera theCamera)
         {
             yield return new WaitForSeconds(2f);
-            Destroy(visionBlur);
+            Debug.Log("i give ye sight!");
+            Destroy(theCamera);
         }
     }
 }

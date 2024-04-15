@@ -609,13 +609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cec83335951204ca703735e8fb24ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mush: 0
-  mushCount: 1
   spawnPoints:
   - {fileID: 1168174727}
   - {fileID: 1875376306}
   - {fileID: 210699666}
-  - {fileID: 1006325023}
   - {fileID: 1830828162}
   - {fileID: 1571625046}
   - {fileID: 345045221}
@@ -623,20 +620,29 @@ MonoBehaviour:
   - {fileID: 705133653}
   - {fileID: 1417982552}
   - {fileID: 806902990}
-  rangeEnd: 0
-  timeText: {fileID: 0}
   mushrooms:
-  - {fileID: 2983539762673540015, guid: 5aa8d7aafc908d34e9be6a30d3ac1209, type: 3}
-  - {fileID: 812438542341690637, guid: 0d67e108e113809459152899a25db950, type: 3}
-  - {fileID: 158147373079266020, guid: d694265e4f64f704fb0877032a0e364e, type: 3}
-  - {fileID: 4015852630893220614, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
-  - {fileID: 4645656267143078749, guid: 4ff715d5eeb9545439f5588edfc2ac57, type: 3}
-  - {fileID: 4876971701918371864, guid: ca8408084eb099848bd227de1fa3a054, type: 3}
-  - {fileID: 8855506091670093614, guid: ebaba87723f1e1847b12afbd0605126a, type: 3}
-  - {fileID: 4645656267143078749, guid: 4ff715d5eeb9545439f5588edfc2ac57, type: 3}
   - {fileID: 3075325386928676343, guid: 6216ffa5f26a39540874e94cc56cda5c, type: 3}
-  - {fileID: 4876971701918371864, guid: ca8408084eb099848bd227de1fa3a054, type: 3}
+  - {fileID: 4015852630893220614, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
+  - {fileID: 2983539762673540015, guid: 5aa8d7aafc908d34e9be6a30d3ac1209, type: 3}
+  - {fileID: 0}
+  - {fileID: 4645656267143078749, guid: 4ff715d5eeb9545439f5588edfc2ac57, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8855506091670093614, guid: ebaba87723f1e1847b12afbd0605126a, type: 3}
   - {fileID: 1985454396821992482, guid: 59866420af1bb06438b34311da786ee4, type: 3}
+  - {fileID: 0}
+  - {fileID: 2362592290921047503, guid: dd6b745747dec9c428fa32b559e2469c, type: 3}
+  otherSprites:
+  - {fileID: 1767496103443134720, guid: 8cc309974f5be994ba8e84b6df84ac3d, type: 3}
+  - {fileID: 158147373079266020, guid: d694265e4f64f704fb0877032a0e364e, type: 3}
+  - {fileID: 2485477850186190476, guid: c84014566fcc94144a1a04b0876cbdf8, type: 3}
+  - {fileID: 812438542341690637, guid: 0d67e108e113809459152899a25db950, type: 3}
+  - {fileID: 3835608363619671384, guid: 279fdd4fc88c60b4680ccf259f6e29d2, type: 3}
+  - {fileID: 4876971701918371864, guid: ca8408084eb099848bd227de1fa3a054, type: 3}
+  - {fileID: 2157250686380969934, guid: 41a2dddbd4ce28741b19b010ee36e204, type: 3}
+  - {fileID: 8855506091670093614, guid: ebaba87723f1e1847b12afbd0605126a, type: 3}
+  mush: 0
+  rangeEnd: 0
   gameTimer: 0
   delay: 0
 --- !u!1 &705133652
@@ -1306,6 +1312,7 @@ MonoBehaviour:
   - {fileID: 2106210089}
   - {fileID: 506670660}
   health: 3
+  dead: 0
 --- !u!4 &1679132660
 Transform:
   m_ObjectHideFlags: 0
