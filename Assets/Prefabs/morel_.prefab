@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4645656267143078750}
   - component: {fileID: 904384184100827436}
   - component: {fileID: 3405978126771417132}
+  - component: {fileID: 4451239720169373223}
   m_Layer: 0
   m_Name: morel_
   m_TagString: mushroom
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 5ab860811af3fb94eadbea7b13718bc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -227,3 +228,16 @@ MonoBehaviour:
   basket: {fileID: 0}
   distanceToDestroy: 5
   distCheck: 0
+--- !u!114 &4451239720169373223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645656267143078749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad271d730e7fe9c4cbf95a909c1a8d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
