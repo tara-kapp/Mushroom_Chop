@@ -14,5 +14,10 @@ public class MainMenu : MonoBehaviour
         {SceneManager.LoadSceneAsync("Options");
        
      }
+
+     public void PlayMenu()
+        {SceneManager.LoadSceneAsync("Main Screen");
+       
+     }
     
 }
