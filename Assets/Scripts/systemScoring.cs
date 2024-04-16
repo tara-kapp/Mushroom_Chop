@@ -37,19 +37,18 @@ public class systemScoring : MonoBehaviour
     public void AddScore()
     {
         score++;
-        gameHandlerObj.AddScore(1);     // addscore from gamehandler script
+        //gameHandlerObj.AddScore(1);     // addscore from gamehandler script
     }
     
     public void RemoveScore()
     {
         score--;
-        gameHandlerObj.MinusScore(1);
+        //gameHandlerObj.MinusScore(1);
     }
 
     public void RemoveHealth()
     {
         health--;
-
         gameHandlerObj.UpdateLives(health);
         
     }

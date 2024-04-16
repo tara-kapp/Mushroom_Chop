@@ -37,17 +37,29 @@ public class basketScript : systemScoring
     {
         if (other.gameObject.tag == "edible")
         {
+            gameObject.GetComponent<AudioSource>().Play();
+            StartCoroutine(StopSFX());
             Destroy(other.gameObject);
             RemoveScore();
         }
         else if(other.gameObject.tag == "inedible") {
+            gameObject.GetComponent<AudioSource>().Play();
+            StartCoroutine(StopSFX());
             Destroy(other.gameObject);
             AddScore();
         }
         else if (other.gameObject.tag == "hallucigenic")
         {
+            gameObject.GetComponent<AudioSource>().Play();
+            StartCoroutine(StopSFX());
             Destroy(other.gameObject);
             AddScore(); AddScore();
+        }
+
+        IEnumerator StopSFX()
+        {
+            yield return new WaitForSeconds(0.5f);
+            gameObject.GetComponent<AudioSource>().Stop();
         }
     }
 }

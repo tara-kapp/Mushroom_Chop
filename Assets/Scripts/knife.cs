@@ -33,6 +33,7 @@ public class knife : systemScoring
     {
         if (other.gameObject.tag == "edible")
         {
+            gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
             StartCoroutine(DestroyVFX(boomFX));
@@ -40,6 +41,7 @@ public class knife : systemScoring
         }
         else if (other.gameObject.tag == "inedible")
         {
+            gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
             StartCoroutine(DestroyVFX(boomFX));
@@ -47,6 +49,7 @@ public class knife : systemScoring
         }
         else if (other.gameObject.tag == "hallucigenic")
         {
+            gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             GameObject boomFX = Instantiate(hitVFX, other.gameObject.transform.position, Quaternion.identity);
             StartCoroutine(DestroyVFX(boomFX));
@@ -57,15 +60,14 @@ public class knife : systemScoring
 
         IEnumerator DestroyVFX(GameObject theEffect)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(.5f);
             Destroy(theEffect);
-            //gameObject.GetComponent<AudioSource>().Stop();
+            gameObject.GetComponent<AudioSource>().Stop();
         }
 
         IEnumerator ReturnVision(Camera theCamera)
         {
             yield return new WaitForSeconds(2f);
-            Debug.Log("i give ye sight!");
             Destroy(theCamera);
         }
     }

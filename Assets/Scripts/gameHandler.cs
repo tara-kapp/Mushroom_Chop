@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class gameHandler : systemScoring
 {
     public GameObject scoreText;
-    private int playerScore = 0;
+    //private int playerScore = 0;
     public GameObject[] hearts;
     public int health;
     public bool dead;
@@ -40,13 +40,14 @@ public class gameHandler : systemScoring
 
     private void Update()
     {
+        UpdateScore();
         if (dead == true)
         {
             Debug.Log("You are dead! GAME OVER");
         }
     }
 
-    public void AddScore(int points)
+    /*public void AddScore(int points)
     {
         playerScore += points;
         UpdateScore();
@@ -56,11 +57,11 @@ public class gameHandler : systemScoring
     {
         playerScore -= points;
         UpdateScore();
-    }
+    }*/
 
     void UpdateScore()
     {
         Text scoreTextB = scoreText.GetComponent<Text>();
-        scoreTextB.text = "SCORE: " + playerScore;
+        scoreTextB.text = "SCORE: " + score;
     }
 }
