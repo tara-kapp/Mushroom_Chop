@@ -7,11 +7,30 @@ using UnityEngine.SocialPlatforms.Impl;
 public class edible : MonoBehaviour
 {
     public Boolean is_edible;
-    public int score;
+    public Boolean trip;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetEdible(GameObject mushroom)
     {
         is_edible = true;
+    }
+
+    public void SetInEdible(GameObject mushroom)
+    {
+        is_edible = false;
+    }
+
+    public void SetHallucinate(GameObject mushroom)
+    {
+        trip = true;
+    }
+
+    public Boolean GetEdible(GameObject mushroom)
+    {
+        return is_edible;
+    }
+
+    public Boolean GetHallucinate(GameObject mushroom)
+    {
+        return trip;
     }
 }

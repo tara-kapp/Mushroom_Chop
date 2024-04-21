@@ -6,6 +6,10 @@ TagManager:
   tags:
   - mushroom
   - basket
+  - edible
+  - inedible
+  - hallucigenic
+  - GameHandler
   layers:
   - Default
   - TransparentFX
