@@ -31,7 +31,7 @@ public class systemScoring : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       Debug.Log("Score: " +  score);
+       //Debug.Log("Score: " +  score);
     }
 
     public void AddScore()

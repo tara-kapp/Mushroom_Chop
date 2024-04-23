@@ -41,21 +41,21 @@ public class spawner : MonoBehaviour
 
         //Game Timer + Variety Increase
         gameTimer += 0.01f;
-        if ( gameTimer >= 2)  { rangeEnd = 2;  }
-        if ( gameTimer >= 4)  { rangeEnd = 3;  }
-        if (gameTimer >= 8)   { rangeEnd = 4;  }
-        if (gameTimer >= 16)  { rangeEnd = 5;  }
+        if (gameTimer >= 2)  { rangeEnd = 1;  }
+        if (gameTimer >= 4)  { rangeEnd = 2;  }
+        if (gameTimer >= 8)   { rangeEnd = 3;  }
+        if (gameTimer >= 16)  { rangeEnd = 4;  }
+        if (gameTimer >= 24)  { rangeEnd = 5;  }
         if (gameTimer >= 32)  { rangeEnd = 6;  }
-        if (gameTimer >= 64)  { rangeEnd = 7;  }
-        if (gameTimer >= 76)  { rangeEnd = 8;  }
-        if (gameTimer >= 88)  { rangeEnd = 9;  }
-        if (gameTimer >= 100) { rangeEnd = 10; }
-        if (gameTimer >= 120) { rangeEnd = 11; }
+        if (gameTimer >= 40)  { rangeEnd = 7;  }
+        if (gameTimer >= 48)  { rangeEnd = 8;  }
+        if (gameTimer >= 64)  { rangeEnd = 9; }
+        if (gameTimer >= 72)  { rangeEnd = 10;}
     }
 
     void spawnMushroom()
     {
-        int SPnum = UnityEngine.Random.Range(0, 11);
+        int SPnum = UnityEngine.Random.Range(0, 10);
         spawnPoint = spawnPoints[SPnum];
 
         if ( mush == 6 ) spriteSwitch(otherSprites[0], otherSprites[1]); //inky cap
