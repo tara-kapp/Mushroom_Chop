@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class gameHandler : systemScoring
 {
@@ -43,7 +44,7 @@ public class gameHandler : systemScoring
         UpdateScore();
         if (dead == true)
         {
-            Debug.Log("You are dead! GAME OVER");
+            SceneManager.LoadSceneAsync("GameOver");
         }
     }
 
