@@ -36,6 +36,6 @@ public class Signs : MonoBehaviour
         if (gameTimer >= 72) { sign = 10;}
         signHolder.sprite = signs[sign];
 
-        Debug.Log(signs[sign]);
+        //Debug.Log(signs[sign]);
     }
 }

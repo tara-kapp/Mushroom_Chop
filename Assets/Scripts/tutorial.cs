@@ -25,8 +25,6 @@ public class tutorial : systemScoring
     private GameObject newTutorial2;
     private GameObject newTutorial3;
 
-    public GameObject[] hearts;
-    public GameObject scoreText;
     private float delay = 0;
 
     public GameObject tutorialEnd;
