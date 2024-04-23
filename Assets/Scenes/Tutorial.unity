@@ -1329,7 +1329,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1679132660}
-  - component: {fileID: 1679132659}
   - component: {fileID: 1679132661}
   m_Layer: 0
   m_Name: GameHandler
@@ -1338,26 +1337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1679132659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679132658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdb7399f2f360748a9538422570afc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameHandlerObj: {fileID: 0}
-  scoreText: {fileID: 232287237}
-  hearts:
-  - {fileID: 1897817910}
-  - {fileID: 2106210089}
-  - {fileID: 506670660}
-  health: 3
-  dead: 0
 --- !u!4 &1679132660
 Transform:
   m_ObjectHideFlags: 0
@@ -1384,17 +1363,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf445c0beeaecb944bd2f22069e85d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basket: {fileID: 0}
-  distanceToDestroy: 5
-  distCheck: 0
-  spawnPoint: {fileID: 1176862674880252390, guid: c2011235932cefa4f89ab783e11f4f4f, type: 3}
+  gameHandlerObj: {fileID: 0}
   edibleMush: {fileID: 7183548509184506226, guid: 7db8b0b79e5f29741aa7f00b971494f5, type: 3}
   inedibleMush: {fileID: 5664358253655836910, guid: be778bd8e473d4e49b95643756005130, type: 3}
-  tutorialUI_1: {fileID: 8118870377824121818, guid: 803f2ea4018edef4cb59e9f1586acc81, type: 3}
+  tutorialUI_1: {fileID: 7689964600437883776, guid: 61a4c781c8c6d3f409fdb6698d821bc3, type: 3}
   tutorialUI_2: {fileID: 674218378810279709, guid: 72d39a7cdcb2f1c4b830004d25b0dc12, type: 3}
   tutorialUI_3: {fileID: 162291200528693988, guid: e30ab739d0830f440ae3d6d5aa0fe2b8, type: 3}
-  newSpawn: 1
-  newSpawn2: 1
+  UIposition: {x: -10, y: -10, z: 0}
+  hearts:
+  - {fileID: 1897817910}
+  - {fileID: 2106210089}
+  - {fileID: 506670660}
+  scoreText: {fileID: 232287237}
+  tutorialEnd: {fileID: 0}
 --- !u!1 &1897817910
 GameObject:
   m_ObjectHideFlags: 0

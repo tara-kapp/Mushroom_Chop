@@ -1,17 +1,11 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
 public class gameHandler : systemScoring
 {
     public GameObject scoreText;
-    //private int playerScore = 0;
     public GameObject[] hearts;
-    public int health;
     public bool dead;
 
     void Start()

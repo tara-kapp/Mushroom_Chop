@@ -32,7 +32,7 @@ public class basketScript : systemScoring
 
 
     }
-    // Makes objects with the tag "mushroom" disappear on contact:
+    // Makes objects with the tag "edible", "inedible", or "hallucigenic" disappear on contact:
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "edible")

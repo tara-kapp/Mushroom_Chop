@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class systemScoring : MonoBehaviour
 {
     public static int score;
-    private static int health;
+    public static int health;
 
     // allows access to gamehandler script
     public gameHandler gameHandlerObj;

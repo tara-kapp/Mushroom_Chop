@@ -1,15 +1,11 @@
 using System;
-using System.Collections;
+using UnityEngine.UI;
 using UnityEngine;
+using System.Threading;
+using UnityEngine.SceneManagement;
 
-public class tutorial : MonoBehaviour
+public class tutorial : systemScoring
 {
-    public Transform basket;
-    public float distanceToDestroy = 5f;
-    public float distCheck;
-
-    public Transform spawnPoint;
-
     public GameObject edibleMush;
     public GameObject inedibleMush;
 
@@ -17,50 +13,113 @@ public class tutorial : MonoBehaviour
     public GameObject tutorialUI_2;
     public GameObject tutorialUI_3;
 
-    public Boolean newSpawn = true;
-    public Boolean newSpawn2 = true;
+    private Boolean newSpawn = true;
+    private Boolean newSpawn2 = true;
+    private Boolean newSpawn3 = true;
+    private Boolean newSpawn4 = true;
+    private Boolean newSpawn5 = true;
 
-    // Start is called before the first frame update
-    void Start()
+    public Vector3 UIposition = new Vector3(-10f, -10f, 0f);
+
+    private GameObject newTutorial1;
+    private GameObject newTutorial2;
+    private GameObject newTutorial3;
+
+    public GameObject[] hearts;
+    public GameObject scoreText;
+    private float delay = 0;
+
+    public GameObject tutorialEnd;
+
+    private void Start()
     {
-        basket = GameObject.FindWithTag("basket").GetComponent<Transform>();
+        tutorialUI_1.transform.position = new Vector3(-4.6f, 2.5f, 0f);
+        tutorialUI_2.transform.position = new Vector3(4.35f, 2.4f, 0f);
+        tutorialUI_3.transform.position = new Vector3(-5f, 2f, 0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (newSpawn)
         {
-            Instantiate(tutorialUI_1);
+            newTutorial1 = Instantiate(tutorialUI_1);
             Instantiate(edibleMush);
             newSpawn = false;
         }
-       
-        if( newSpawn2)
+
+        if( score == -1 )
         {
-            Instantiate(tutorialUI_2);
-            Instantiate(inedibleMush);
-            newSpawn2 = false;
+            if (newSpawn5)
+            {
+                Instantiate(edibleMush);
+                newSpawn5 = false;
+                score = 0;
+            }
         }
 
-        Transform edible_y = edibleMush.GetComponent<Transform>();
-        //int edible = edible_y.position.y;
-
-        /*if ( < -5 )
+        if (score == 1)
         {
-            edibleMush.transform.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
-        }*/
+            if (newSpawn2)
+            {
+                newTutorial1.transform.position = UIposition;
+                newTutorial2 = Instantiate(tutorialUI_2);
+                Instantiate(inedibleMush);
+                newSpawn2 = false;
+            }
+        }
 
-        //reposition(edibleMush);
-        //reposition(inedibleMush);
-    }
+        if ( health <= 2 || score == 2 )
+        {   
+            if (newSpawn3)
+            {
+                Instantiate(inedibleMush);
+                newSpawn3 = false;
+            }
+            if (newSpawn4)
+            {
+                newTutorial3 = Instantiate(tutorialUI_3);
+                newSpawn4 = false;
+            }
+        }
 
-    void reposition(GameObject mush)
-    {
+        if (score == 6 )
+        {
+            SceneManager.LoadSceneAsync("End Tutorial");
+        }
         
+        UpdateLives(health);
+        UpdateScore();
     }
 
+    void FixedUpdate()
+    {
+        delay += 1;
+        if (delay % 75 == 0 && ( score > 2 || health < 3 )) 
+        {
+            int num = UnityEngine.Random.Range(0, 2);
+            if (num == 0)
+            {
+                Instantiate(inedibleMush, new Vector3(-5f, -10f, 0f), new Quaternion());
+            }
+            else { Instantiate(edibleMush); }
+        }
+        if (delay > 200) { delay = 0; }
+    }
+    public void UpdateLives(int health)
+    {
+        if (health < 2)
+        {
+            Destroy(hearts[1].gameObject);
+        }
+        else if (health < 3)
+        {
+            Destroy(hearts[2].gameObject);
+        }
+    }
 
-
-
+    void UpdateScore()
+    {
+        Text scoreTextB = scoreText.GetComponent<Text>();
+        scoreTextB.text = "SCORE: " + score;
+    }
 }
