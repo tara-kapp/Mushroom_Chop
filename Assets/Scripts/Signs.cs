@@ -19,9 +19,7 @@ public class Signs : MonoBehaviour
     void FixedUpdate()
     {
         SpawnSign();
-
     }
-
 
     void SpawnSign()
     {
