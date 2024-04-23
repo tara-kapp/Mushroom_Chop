@@ -5,20 +5,16 @@ using UnityEngine;
 public class MushroomRotation : MonoBehaviour
 {
     public Rigidbody2D rb;
-    float rotationSpeed = 30;
+    public int rotationSpeedPos = 60;
+    public int rotationSpeedNeg = -60;
     float mushroomDrag = 2;
     
     // Start is called before the first frame update
     void Start()
     {
+        float rotationSpeed = Random.Range(rotationSpeedNeg, rotationSpeedPos);
         rb = GetComponent<Rigidbody2D>();
         rb.drag = mushroomDrag;
         rb.AddTorque(rotationSpeed);
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
     }
 }
