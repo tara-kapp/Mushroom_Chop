@@ -19,14 +19,14 @@ public class knife : systemScoring
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(cursorPos.x, cursorPos.y);
         
-        if (Input.GetMouseButtonDown(0)) {
+        /*if (Input.GetMouseButtonDown(0)) {
             spriteRenderer.sprite = arrowSprite;
             polygonCollider.isTrigger = true;
         }
         if (Input.GetMouseButtonUp(0)) {
             spriteRenderer.sprite = knifeSprite;
             polygonCollider.isTrigger = false;
-        }
+        }*/
     }
 
     void OnCollisionEnter2D(Collision2D other)

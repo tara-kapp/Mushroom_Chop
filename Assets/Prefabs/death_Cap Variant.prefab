@@ -66,8 +66,27 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -4782151968277815514, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
+--- !u!1 &5664358253655836910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4015852630893220614, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
+  m_PrefabInstance: {fileID: 8728252479575170024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &5664358253655836914 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4015852630893220634, guid: 2e56b6a24681e5a4696ef2d00b43eed8, type: 3}
   m_PrefabInstance: {fileID: 8728252479575170024}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8144708261792623715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664358253655836910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3d53cd1475b0642bbd9e0b6f30f10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  despawnPoint: {x: 0, y: -10, z: 0}
+  spawnPoint: {x: 0, y: 10, z: 0}

@@ -24,5 +24,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("Guide");
     }
-    
+
+    public void PlayTutorial()
+    {
+        SceneManager.LoadSceneAsync("Tutorial");
+    }
+
 }
