@@ -10,6 +10,7 @@ TagManager:
   - inedible
   - hallucigenic
   - GameHandler
+  - Audio
   layers:
   - Default
   - TransparentFX
