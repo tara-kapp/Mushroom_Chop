@@ -1386,6 +1386,7 @@ MonoBehaviour:
   UIposition: {x: -10, y: -10, z: 0}
   delay2: 0
   tutorialEnd: {fileID: 0}
+  completionText: {fileID: 8257406560848830938, guid: b571d21c78dc17141ab77fa6e4b07a5e, type: 3}
 --- !u!1 &1897817910
 GameObject:
   m_ObjectHideFlags: 0
