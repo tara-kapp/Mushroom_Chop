@@ -14,12 +14,36 @@ public class systemScoring : MonoBehaviour
     public bool dead;
     public GameObject scoreText;
 
+
+    // allows access to gamehandler script
+    //public gameHandler gameHandlerObj;
+
+
     void Start()
     {
         UpdateScore();
         score = 0;
         health = 3;      
     }
+
+    /*public void UpdateLives()
+    {
+        if (health < 1)
+        {
+            Debug.Log(health);
+            Destroy(hearts[0].gameObject);
+            dead = true;
+            SceneManager.LoadSceneAsync("GameOver");
+        }
+        else if (health < 2)
+        {
+            Destroy(hearts[1].gameObject);
+        }
+        else if (health < 3)
+        {
+            Destroy(hearts[2].gameObject);
+        }        
+    }*/
 
     void Update()
     {
@@ -39,22 +63,33 @@ public class systemScoring : MonoBehaviour
         scoreTextB.text = "SCORE: " + score;
     }
 
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+       //Debug.Log("Score: " +  score);
+    }
+
     public void AddScore()
     {
-        score++;        
+        score++;
+        //gameHandlerObj.AddScore(1);     // addscore from gamehandler script
     }
     
     public void RemoveScore()
     {
-        score--;        
+        score--;
+        //gameHandlerObj.MinusScore(1);
     }
 
     public void RemoveHealth()
     {
-        health--;        
+        health--;
+        //UpdateLives();
         
         if (health < 1)
-        {            
+        {
+            Debug.Log(health);
             Destroy(hearts[0].gameObject);
             SaveScore();
             SceneManager.LoadSceneAsync("GameOver");
@@ -69,11 +104,21 @@ public class systemScoring : MonoBehaviour
         }
     }
 
+
+    // Save the score
     void SaveScore()
     {
-        Debug.Log(score);
         PlayerPrefs.SetInt("HighScore", score);
         //PlayerPrefs.SetString("PlayerName", playerName);
         PlayerPrefs.Save();
+    }
+
+    int LoadScore()
+    {
+        return PlayerPrefs.GetInt("HighScore", 0);
+    }
+    string LoadPlayerName()
+    {
+        return PlayerPrefs.GetString("PlayerName", "Player");
     }
 }
