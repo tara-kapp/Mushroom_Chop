@@ -1384,6 +1384,7 @@ MonoBehaviour:
   tutorialUI_2: {fileID: 674218378810279709, guid: 72d39a7cdcb2f1c4b830004d25b0dc12, type: 3}
   tutorialUI_3: {fileID: 162291200528693988, guid: e30ab739d0830f440ae3d6d5aa0fe2b8, type: 3}
   UIposition: {x: -10, y: -10, z: 0}
+  delay2: 0
   tutorialEnd: {fileID: 0}
 --- !u!1 &1897817910
 GameObject:

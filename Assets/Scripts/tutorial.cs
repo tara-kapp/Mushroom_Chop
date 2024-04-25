@@ -26,8 +26,12 @@ public class tutorial : systemScoring
     private GameObject newTutorial3;
 
     private float delay = 0;
+    public double delay2 = 0;
 
     public GameObject tutorialEnd;
+    private bool tutorialSpawn = true;
+    private bool tutorialSpawn2 = true;
+    private bool tutorialSpawn3 = true;
 
     private void Start()
     {
@@ -40,13 +44,23 @@ public class tutorial : systemScoring
     {
         if (newSpawn)
         {
-            newTutorial1 = Instantiate(tutorialUI_1);
-            Instantiate(edibleMush);
-            newSpawn = false;
+            if (tutorialSpawn) { 
+                newTutorial1 = Instantiate(tutorialUI_1);
+                tutorialSpawn = false;
+            }
+            if (delay2 > 3)
+            {
+                Instantiate(edibleMush);
+                delay2 = 0;
+                newSpawn = false;
+            }
+            
+            
         }
 
         if( score == -1 )
         {
+            newSpawn5 = true;
             if (newSpawn5)
             {
                 Instantiate(edibleMush);
@@ -60,9 +74,17 @@ public class tutorial : systemScoring
             if (newSpawn2)
             {
                 newTutorial1.transform.position = UIposition;
-                newTutorial2 = Instantiate(tutorialUI_2);
-                Instantiate(inedibleMush);
-                newSpawn2 = false;
+                if (tutorialSpawn2)
+                {
+                    newTutorial2 = Instantiate(tutorialUI_2);
+                    tutorialSpawn2 = false;
+                }
+                if (delay2 > 5) 
+                {
+                    Instantiate(inedibleMush);
+                    newSpawn2 = false;
+                }
+                
             }
         }
 
@@ -75,7 +97,12 @@ public class tutorial : systemScoring
             }
             if (newSpawn4)
             {
-                newTutorial3 = Instantiate(tutorialUI_3);
+                if (tutorialSpawn3 )
+                {
+                    newTutorial3 = Instantiate(tutorialUI_3);
+                    tutorialSpawn3 = false;
+                }
+                
                 newSpawn4 = false;
             }
         }
@@ -94,6 +121,9 @@ public class tutorial : systemScoring
 
     void FixedUpdate()
     {
+        //delay for inital mushrooms
+        delay2 += 0.01;
+        //delay for later mushroom spawning
         delay += 1;
         if (delay % 75 == 0 && ( score > 2 || health < 3 )) 
         {
