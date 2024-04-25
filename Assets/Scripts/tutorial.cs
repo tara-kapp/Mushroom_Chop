@@ -33,6 +33,7 @@ public class tutorial : systemScoring
     private bool tutorialSpawn2 = true;
     private bool tutorialSpawn3 = true;
 
+    public GameObject completionText;
     private void Start()
     {
         tutorialUI_1.transform.position = new Vector3(-4.6f, 2.5f, 0f);
@@ -109,7 +110,9 @@ public class tutorial : systemScoring
 
         if (score == 6 )
         {
-            SceneManager.LoadSceneAsync("End Tutorial");
+            Instantiate(completionText); 
+            health = 3; score = 0;
+            SceneManager.LoadSceneAsync("Scene_1");
         }
         if(health < 2)
         {
