@@ -84,7 +84,10 @@ public class tutorial : systemScoring
         {
             SceneManager.LoadSceneAsync("End Tutorial");
         }
-        
+        if(health < 2)
+        {
+            health = 2;
+        }
         UpdateLives(health);
         UpdateScore();
     }

@@ -10,6 +10,7 @@ TagManager:
   - inedible
   - hallucigenic
   - GameHandler
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1415273589
     locked: 0

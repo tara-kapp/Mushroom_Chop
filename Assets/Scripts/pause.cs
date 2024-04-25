@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pause : MonoBehaviour
 {
+	public GameObject pauseMenu;
 	bool paused = false;
 
 	public void Update()
@@ -17,9 +18,14 @@ public class pause : MonoBehaviour
 	{
 		if(paused)
 		{
-			GUILayout.BeginArea (new Rect (Screen.width/2 - 100, Screen.height/2, 200, 100));
-        	GUILayout.Box ("Game is paused");
-        	GUILayout.EndArea ();
+			pauseMenu.transform.position = Vector3.zero;
+			//GUILayout.BeginArea (new Rect (Screen.width/2 - 100, Screen.height/2, 200, 100));
+        	//GUILayout.Box ("Game is paused");
+        	//GUILayout.EndArea ();
+		}
+		else if ( !paused )
+		{
+			pauseMenu.transform.position = new Vector3(0f, 20f, 1f);
 		}
 	}
 	
